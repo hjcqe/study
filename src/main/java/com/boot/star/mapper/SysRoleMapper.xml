@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.boot.star.mapper.SysRoleMapper" >
+  <resultMap id="BaseResultMap" type="com.boot.star.model.SysRole" >
+    <id column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="ROLE_CODE" property="roleCode" jdbcType="VARCHAR" />
+    <result column="ROLE_NAME" property="roleName" jdbcType="VARCHAR" />
+    <result column="ROLE_SORT" property="roleSort" jdbcType="VARCHAR" />
+    <result column="ROLE_ADMINFLAG" property="roleAdminflag" jdbcType="VARCHAR" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="CREATE_USER" property="createUser" jdbcType="VARCHAR" />
+    <result column="UPDATE_TIME" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="UPDATE_USER" property="updateUser" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="INTEGER" />
+    <result column="RMK" property="rmk" jdbcType="VARCHAR" />
+    <result column="ROLE_TYPE" property="roleType" jdbcType="INTEGER" />
+  </resultMap>
+
+  <select id="selectRole" resultType="com.boot.star.model.SysRole">
+    select * from sys_role limit 1
+  </select>
+</mapper>
