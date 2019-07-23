@@ -185,10 +185,8 @@ public class UserController {
     @RequestMapping("/updateObj")
     @ResponseBody
     public String updateObj(String id){
-        TUser user = new TUser();
-        user.setId(Integer.valueOf(id));
-        user.setName("默认");
-        int result = userService.updateUser(user);
+
+        int result = 0;
         if(result == 0){
             return "修改失败";
         }
